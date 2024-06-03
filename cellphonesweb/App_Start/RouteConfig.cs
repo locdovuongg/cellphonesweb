@@ -78,6 +78,7 @@ namespace cellphonesweb
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "cellphonesweb.Controllers" }
             );
+         
         }
     }
 }

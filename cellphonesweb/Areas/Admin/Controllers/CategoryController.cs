@@ -8,7 +8,9 @@ using System.Web.Mvc;
 
 namespace cellphonesweb.Areas.Admin.Controllers
 {
-        public class CategoryController : Controller
+    [Authorize(Roles = "Admin")]
+
+    public class CategoryController : Controller
         {
             private ApplicationDbContext db = new ApplicationDbContext();
             // GET: Admin/Category

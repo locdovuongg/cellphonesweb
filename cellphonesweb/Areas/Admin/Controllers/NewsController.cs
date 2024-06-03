@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Data.Entity.Infrastructure;
 namespace cellphonesweb.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Employee")]
     public class NewsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

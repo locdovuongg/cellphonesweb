@@ -16,7 +16,8 @@
 
 }, new { @Id = "myForm" }))
 {
-    <script>function OnBeginCO() {
+    <script>
+        function OnBeginCO() {
             $('#btnCheckOut').attr("disabled", "disabled");
             $('#load_send').html('<h2>Đang gửi....</h2>');
         }
@@ -30,9 +31,10 @@
                 }
             }
         }
-                                            //function OnFailure() {
+        //function OnFailure() {
 
-                                            //}</script>
+        //}
+    </script>
     @Html.AntiForgeryToken()
 
     <h3>Thông tin khách hàng</h3>
@@ -81,13 +83,14 @@
     }
 
 
-    <div class="form-group">
-        <label>Hình thức thanh toán</label>
-        <select class="form-control" name="TypePayment" id="drTypePayment">
-            <option value="1" selected>COD</option>
-            <option value="2">Chuyển khoản</option>
-        </select>
-    </div>
+<div class="form-group">
+    <label>Hình thức thanh toán</label>
+    <select class="form-control" name="TypePayment" id="drTypePayment">
+        <option value="1" selected>COD</option>
+        <option value="2" id="drTypePaymentVn">Chuyển khoản</option>
+    </select>
+   
+</div>
     <div class="form-group" id="load_form_payment" style="display:none;">
         <h4> <label>Chọn phương thức thanh toán:</label><br /></h4>
         <h5>Cách 1: Chuyển hướng sang VNPAY chọn phương thức thanh toán</h5>

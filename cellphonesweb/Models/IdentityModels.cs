@@ -28,10 +28,8 @@ namespace cellphonesweb.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
         public DbSet<Category> Categories { get; set; }
         public DbSet<News> News { get; set; }
-        public DbSet<SystemSetting> SystemSettings { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }

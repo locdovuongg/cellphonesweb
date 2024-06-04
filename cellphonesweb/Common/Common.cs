@@ -7,11 +7,9 @@ using System.Net;
 using System.Web;
 
 namespace cellphonesweb.Common
-{
+  {
     public class Common
     {
-
-
         private static string password = ConfigurationManager.AppSettings["PasswordEmail"];
         private static string Email = ConfigurationManager.AppSettings["Email"];
         public static bool SendMail(string name, string subject, string content,
@@ -23,7 +21,7 @@ namespace cellphonesweb.Common
                 MailMessage message = new MailMessage();
                 var smtp = new SmtpClient();
                 {
-                    smtp.Host = "smtp.gmail.com"; //host name
+                    smtp.Host = "smtp.a1k58rose@gmail.com"; //host name
                     smtp.Port = 587; //port number
                     smtp.EnableSsl = true; //whether your smtp server requires SSL
                     smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
@@ -84,6 +82,53 @@ namespace cellphonesweb.Common
                        || value is float
                        || value is double
                        || value is decimal;
+        }
+
+
+        public static string HtmlRate(int rate)
+        {
+            var str = "";
+            if (rate == 1)
+            {
+                str = @"<li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>";
+            }
+            if (rate == 2)
+            {
+                str = @"<li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>";
+            }
+            if (rate == 3)
+            {
+                str = @"<li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>";
+            }
+            if (rate == 4)
+            {
+                str = @"<li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star-o' aria-hidden='true'></i></li>";
+            }
+            if (rate == 5)
+            {
+                str = @"<li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>
+                    <li><i class='fa fa-star' aria-hidden='true'></i></li>";
+            }
+            return str;
         }
     }
 }

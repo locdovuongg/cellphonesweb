@@ -146,3 +146,4 @@ E:\code\cellphonesweb\cellphonesweb\bin\System.Runtime.CompilerServices.Unsafe.x
 E:\code\cellphonesweb\cellphonesweb\bin\System.Threading.Tasks.Extensions.xml
 E:\code\cellphonesweb\cellphonesweb\bin\System.ValueTuple.xml
 E:\code\cellphonesweb\cellphonesweb\obj\Debug\cellphonesweb.Migrations.updatedtb12.resources
+E:\code\cellphonesweb\cellphonesweb\obj\Debug\cellphonesweb.Migrations.updatedtb13.resources

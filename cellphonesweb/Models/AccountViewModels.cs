@@ -72,7 +72,7 @@ namespace cellphonesweb.Models
 
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "UserName")]
         public string Email { get; set; }
 
         [Required]
@@ -104,6 +104,7 @@ namespace cellphonesweb.Models
     }
     public class RegisterViewModel
     {
+       
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -119,6 +120,10 @@ namespace cellphonesweb.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public string ConfirmationCode { get; set; }
+
+        public bool IsEmailConfirmed { get; set; } // New field
     }
 
     public class ResetPasswordViewModel

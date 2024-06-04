@@ -229,6 +229,7 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -276,6 +277,10 @@
     <Compile Include="Migrations\202406020441283_updatedtb12.cs" />
     <Compile Include="Migrations\202406020441283_updatedtb12.designer.cs">
       <DependentUpon>202406020441283_updatedtb12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406041152468_updatedtb13.cs" />
+    <Compile Include="Migrations\202406041152468_updatedtb13.designer.cs">
+      <DependentUpon>202406041152468_updatedtb13.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -3647,12 +3652,14 @@
     <Content Include="Views\ShoppingCart\Partial_Item_ThanhToan.cshtml" />
     <Content Include="Views\ShoppingCart\VnpayReturn.cshtml" />
     <Content Include="Views\Account\Profile.cshtml" />
+    <Content Include="Views\Review\_Load_Review.cshtml" />
+    <Content Include="Views\Review\_Review.cshtml" />
+    <Content Include="Views\Review\LichSuDonHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Content\ckfinder\userfiles\" />
-    <Folder Include="Views\Article\" />
     <Folder Include="Views\Filter\" />
   </ItemGroup>
   <ItemGroup>
@@ -3715,6 +3722,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202406020441283_updatedtb12.resx">
       <DependentUpon>202406020441283_updatedtb12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406041152468_updatedtb13.resx">
+      <DependentUpon>202406041152468_updatedtb13.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

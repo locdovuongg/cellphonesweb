@@ -47,19 +47,18 @@ namespace cellphonesweb.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult UpdateTT(int id, int trangthai)
+        public JsonResult UpdateTT(int id, int trangthai)
         {
-            var item = db.Orders.Find(id);
-            if (item != null)
+            var order = db.Orders.Find(id);
+            if (order != null)
             {
-                db.Orders.Attach(item);
-                item.TypePayment = trangthai;
-                db.Entry(item).Property(x => x.TypePayment).IsModified = true;
+                order.Status = trangthai;
+                db.Entry(order).Property(x => x.Status).IsModified = true; // Chỉ đánh dấu trường Status đã được sửa đổi
                 db.SaveChanges();
-                return Json(new { message = "Success", Success = true });
+                return Json(new { Success = true });
             }
-            return Json(new { message = "Unsuccess", Success = false });
+            return Json(new { Success = false });
         }
     }
-
 }
+  

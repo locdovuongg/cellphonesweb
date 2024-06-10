@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace cellphonesweb.Controllers
 {
-        [Authorize]
+       
         public class ReviewController : Controller
         {
             private ApplicationDbContext _db = new ApplicationDbContext();

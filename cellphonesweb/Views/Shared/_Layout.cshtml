@@ -16,18 +16,18 @@
     <meta name="description" content="@ViewBag.SeoDescription" />
     <meta name="keywords" itemprop="keywords" content="@ViewBag.SeoKeyWord" />
     @*<meta name="news_keywords" content="@ViewBag.SeoKeyWord" />*@
-    <link rel="canonical" href="https://www.ten_mien_cua_cac_ban/" />
+    <link rel="canonical" href="" />
     <meta name="robots" content="index,follow,noodp" />
     <meta name="robots" content="noarchive">
-    <meta property="og:site_name" content="Bán hàng online" />
+    <meta property="og:site_name" content="Bán điệ thoại online" />
     <meta property="og:type" content="Website" />
     <meta property="og:locale" content="vi_VN" />
     @*<meta property="fb:app_id" content="232505114857147" />*@
     @*<meta property="fb:pages" content="1128104117285467" />*@
     <meta property="og:title" itemprop="name" content="@ViewBag.Title" />
-    <meta property="og:url" itemprop="url" content="https://www.ten_mien_cua_cac_ban/" />
+    <meta property="og:url" itemprop="url" content="" />
     <meta property="og:description" content="@ViewBag.SeoDescription" />
-    <meta content="https://cdn.24h.com.vn/upload/2-2018/images/2018-06-14/logo-chan-trang-24h.png" property="og:image" itemprop="thumbnailUrl" />
+    <meta content="" property="og:image" itemprop="thumbnailUrl" />
     <!--script_breadcrum-->
     @*@RenderSection("css", required: false)*@
     <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/responsive.css">
@@ -137,7 +137,7 @@
                                 @Html.Action("MenuTop", "Menu")
                                 <ul class="navbar_user">
                                     <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                    <li><a href="@Url.Action("LichSuDonHang", "Review")""><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                     @if (Request.IsAuthenticated)
                                     {
                                         <li class="checkout">

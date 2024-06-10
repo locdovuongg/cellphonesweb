@@ -73,11 +73,31 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Trạng thái</label>
-                        <p class="form-control">@(Model.TypePayment == 1? "Chưa thanh toán" : "Đã thanh toán")</p>
+                        <p class="form-control">
+                            @if (Model.Status == 1)
+                            {
+                                <span>Chưa thanh toán</span>
+                            }
+                            @if (Model.Status == 2)
+                            {
+                                <span>Đã thanh toán</span>
+                            }
+                            @if (Model.Status == 3)
+                            {
+                                <span>Hoàn thành</span>
+                            }
+                            @if (Model.Status == 4)
+                            {
+                                <span>Hủy</span>
+                            }
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6">
-
+                    <div class="form-group">
+                        <label>Phương thức thanh toán</label>
+                        <p class="form-control">@(Model.TypePayment == 1 ? "COD" : "VNPay")</p>
+                    </div>
                 </div>
             </div>
             <div class="row">
